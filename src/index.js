@@ -6,6 +6,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './routes/login';
 import DynamicQuestions from './routes/perguntas';
 import MainPage from './routes/telaPrincipal';
+import VideoPlayer from './routes/ensinamento';
+import PerguntasQuiz from './routes/quiz';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +17,8 @@ root.render(
         <Route element={<App />}>
           <Route path="*" element={<Login />} />
           <Route path="perguntas" element={<DynamicQuestions />} />
+          <Route path="ensino" element={<VideoPlayer />} />
+          <Route path="quiz" element={<PerguntasQuiz />} />
           <Route path="main" element={<MainPage />} />
         </Route>
       </Routes>

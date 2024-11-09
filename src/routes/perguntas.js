@@ -51,7 +51,8 @@ const DynamicQuestions = () => {
     } else {
         setUser({...{
             username: name,
-            password: password
+            password: password,
+            progresso: 1
         }, ...{
             preferencias: [...answers, answer]
         }})
