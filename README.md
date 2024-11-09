@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# Protótipo de Curso: Implementação de Sistema de CRM para Funcionários da Área Comercial
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descrição
 
-## Available Scripts
+Este projeto é um protótipo de curso interativo para treinamento de funcionários da área comercial, com o objetivo de ensinar como implementar e utilizar um Sistema de Gestão de Relacionamento com o Cliente (CRM). O curso oferece uma experiência personalizada, moldando-se de acordo com a trilha de conhecimento selecionada pelo usuário. Com isso, os módulos, vídeos e perguntas são ajustados conforme a área de conhecimento escolhida, garantindo que o aprendizado seja focado nas necessidades do funcionário.
 
-In the project directory, you can run:
+## Funcionalidades
 
-### `npm start`
+- **Trilhas de Conhecimento Personalizadas**: O curso permite que o usuário selecione uma trilha de conhecimento (ex: Técnicas de Venda, Gestão de Clientes, Negociação). Com base na trilha selecionada, o conteúdo do curso, incluindo vídeos, módulos e perguntas, se adapta automaticamente.
+  
+- **Perguntas e Respostas**: Cada módulo contém perguntas sobre os tópicos relevantes para a trilha escolhida. As perguntas são seguidas de alternativas e feedback em tempo real.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Progresso do Usuário**: O sistema acompanha o progresso do funcionário, fornecendo feedback imediato para melhorar o aprendizado, e permitindo que o usuário veja seu avanço no curso.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Interface Simples e Responsiva**: Interface construída com React e componentes do Bootstrap, proporcionando uma navegação fluida e agradável durante o curso.
 
-### `npm test`
+- **Gamificação**: A interação com o conteúdo é enriquecida com gamificação, onde os usuários avançam de acordo com as respostas corretas e podem ver seu progresso à medida que completam as atividades.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tecnologias Utilizadas
 
-### `npm run build`
+- **React**: Biblioteca JavaScript para construção da interface do usuário.
+- **React-Bootstrap**: Framework para criar componentes de UI responsivos e modernos com o React.
+- **React-Router**: Gerenciamento de navegação entre páginas no frontend.
+- **Hooks do React**: Utilização de `useState`, `useNavigate` e `useOutletContext` para controlar o estado do aplicativo e navegação.
+- **Icons**: Utilização do `react-icons` para ícones, como o ícone de sair.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Funcionalidades do Sistema de CRM
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+O treinamento oferece uma base sólida sobre as funcionalidades chave de um sistema de CRM, com foco na trilha selecionada:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Gestão de Clientes**: Como registrar e organizar as informações dos clientes, monitorando o histórico de interações e gerenciando as necessidades deles.
+  
+- **Técnicas de Venda**: Como usar o CRM para aprimorar as interações com os clientes e fechar mais vendas.
+  
+- **Negociação**: Como o CRM pode facilitar o processo de negociação, fornecendo dados relevantes para alcançar acordos vantajosos para ambas as partes.
 
-### `npm run eject`
+## Como Funciona a Personalização por Trilha
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Seleção da Trilha**: O usuário escolhe uma trilha de conhecimento, que pode ser, por exemplo, "Técnicas de Venda", "Gestão de Clientes" ou "Negociação".
+  
+- **Mudança Dinâmica do Conteúdo**: Com base na trilha escolhida, o sistema ajusta os módulos de aprendizado, vídeos e perguntas. Cada trilha tem perguntas específicas e materiais de apoio, proporcionando uma experiência personalizada e focada.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Feedback Personalizado**: O feedback também é adaptado de acordo com a trilha, garantindo que o usuário saiba como está se saindo em relação ao tema que escolheu.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Como Rodar o Projeto Localmente
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/prototipo-curso-crm.git
+   ```
 
-## Learn More
+2. Navegue até o diretório do projeto:
+   ```bash
+   cd prototipo-curso-crm
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm start
+   ```
 
-### Code Splitting
+   O aplicativo estará disponível em [http://localhost:3000](http://localhost:3000).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Estrutura do Projeto
 
-### Analyzing the Bundle Size
+- **src/components**: Componentes reutilizáveis, como o menu principal, questões do quiz e feedback.
+- **src/pages**: Páginas principais do aplicativo, como a página de perguntas e a página de progresso.
+- **src/styles**: Estilos CSS personalizados para o layout e componentes.
+- **src/context**: Contexto do React para gerenciar o estado global, como o progresso do usuário e informações do CRM.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Como Contribuir
 
-### Making a Progressive Web App
+1. Faça um fork deste repositório.
+2. Crie uma nova branch para suas modificações:
+   ```bash
+   git checkout -b minha-nova-feature
+   ```
+3. Realize suas alterações e faça um commit:
+   ```bash
+   git commit -m "Descrição das alterações"
+   ```
+4. Envie para o repositório remoto:
+   ```bash
+   git push origin minha-nova-feature
+   ```
+5. Abra um Pull Request para a branch `main`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Licença
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
