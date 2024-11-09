@@ -18,7 +18,7 @@ function App()
       summary: 'Parabéns!',
       detail: mensagem,
       life: 2000, // Duração do toastr (3 segundos)
-    });*/
+    }); teste*/
   }
 
   return (
