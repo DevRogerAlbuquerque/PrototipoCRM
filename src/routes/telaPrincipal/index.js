@@ -33,7 +33,7 @@ const MainPage = ({ userName }) => {
 
 
       {/* Conteúdo principal com os módulos */}
-      <Container>
+      <Container id="main">
         <Row className="g-4">
           {modules.map((module, index) => (
             <Col key={index} md={4}>

@@ -1,6 +1,7 @@
 body {
   font-family: 'Roboto', sans-serif;
-  background: linear-gradient(135deg, #e6f7ff, #b3e5fc); /* Gradiente de azul suave */
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
   margin: 0;
   height: 100vh;
   display: flex;
@@ -75,8 +76,15 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: cornflowerblue;
   font-weight: bold;
+  color: white;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,0.4290966386554622) 35%, rgba(0,212,255,0.06495098039215685) 100%);
+}
+
+#main .card:hover {
+  background-image: linear-gradient(to right bottom, #051937, #002265, #002894, #0027c1, #1214eb);
+  transform: scale(1.1);
   color: white;
 }
 

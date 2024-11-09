@@ -64,7 +64,7 @@ const DynamicQuestions = () => {
   };
 
   return (
-    <Container className="d-flex justify-content-center align-items-center" style={{ height: "100vh" }}>
+    <Container id="perguntas" className="d-flex justify-content-center align-items-center" style={{ height: "100vh" }}>
       
       <Card className="p-4 shadow" style={{ maxWidth: "500px", width: "100%" }}>
         <Card.Body>
