@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #e6f7ff, #b3e5fc); /* Gradiente de azul suave */
+  margin: 0;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.login-container {
+  height: 100vh;
+}
+
+.login-card {
+  border-radius: 12px;
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.login-title {
+  font-size: 24px;
+  color: #1a73e8; /* Azul vibrante para o título */
+  margin-bottom: 10px;
+}
+
+.login-subtitle {
+  font-size: 14px;
+  color: #5f6368; /* Azul acinzentado para o subtítulo */
+  margin-bottom: 20px;
+}
+
+.login-input {
+  border-radius: 8px;
+  border: 1px solid #cfd8dc; /* Azul claro para a borda dos inputs */
+  transition: border-color 0.3s;
+}
+
+.login-input:focus {
+  border-color: #1a73e8; /* Azul vibrante para o foco */
+}
+
+.login-button {
+  background-color: #1a73e8; /* Azul vibrante para o botão */
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  color: #ffffff;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #155bb5; /* Azul mais escuro ao passar o mouse */
+}
+
+.create-account-button {
+  border-radius: 8px;
+  border: 1px solid #1a73e8; /* Borda azul para o botão Criar Conta */
+  color: #1a73e8; /* Azul vibrante para o texto */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.create-account-button:hover {
+  background-color: #e3f2fd; /* Fundo azul claro ao passar o mouse */
+  color: #155bb5; /* Azul mais escuro para o texto */
+}
+
+#root
+{
+  width: 100%;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: cornflowerblue;
+  font-weight: bold;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hover:hover {
+  cursor: pointer;
 }

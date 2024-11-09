@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import { Outlet } from 'react-router-dom';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { useRef, useState } from 'react';
+import 'primereact/resources/themes/lara-light-indigo/theme.css'; // Tema (você pode escolher outro tema)
+import 'primereact/resources/primereact.min.css'; // Estilos principais do PrimeReact
+import 'primeicons/primeicons.css'; // Ícones do PrimeIcons
+import { Toast } from 'react-bootstrap';
 
-function App() {
+function App() 
+{
+  const [user, setUser] = useState({});
+  const toastRef = useRef(null);
+  
+  const exibirToast = (mensagem) => {/*
+    toastRef.current.show({
+      severity: 'success',
+      summary: 'Parabéns!',
+      detail: mensagem,
+      life: 2000, // Duração do toastr (3 segundos)
+    });*/
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Toast ref={toastRef} />
+      <Outlet context={{user: user, setUser: setUser, exibirToast: exibirToast}}/>
+    </>
   );
 }
 
