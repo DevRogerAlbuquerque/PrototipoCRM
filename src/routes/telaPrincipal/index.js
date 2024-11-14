@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Navbar, Card, Button, Row, Col } from 'react-bootstrap';
 import { FaSignOutAlt } from 'react-icons/fa';
 import { useNavigate, useOutletContext } from 'react-router-dom';
+import logo from '../../imagens/skill__2_-removebg-preview.png';
 
 const MainPage = () => {
   const { user, setUser } = useOutletContext();
@@ -81,12 +82,14 @@ const MainPage = () => {
       {/* Conteúdo principal com os módulos */}
       <Container id="main">
         <Row>
-          <Col><h2 style={{
+          <Col className="d-flex flex-column align-items-center justify-content-center">
+          <img src={logo} />
+          <h2 style={{
               color: 'white',
               fontSize: '24px',
               textAlign: 'center',
               marginBottom: '20px',
-              fontFamily: 'Roboto',
+              fontWeight: 'bold'
             }}>Trilha de Aprendizado: {user.preferencias[2]}</h2></Col>
         </Row>
         <Row className="g-4">

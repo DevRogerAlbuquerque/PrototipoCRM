@@ -50,7 +50,7 @@ const Login = () => {
         <Col md={6}>
           <Card className="p-4 shadow login-card">
             <Card.Body>
-              <h1 className="text-center login-title">Bem-vindo</h1>
+              <h1 className="text-center login-title">Bem-vindo ao SkillPro</h1>
               <p className="text-center login-subtitle">
                 Faça login para acessar sua trilha de aprendizado
               </p>

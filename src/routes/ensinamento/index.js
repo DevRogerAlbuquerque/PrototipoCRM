@@ -91,7 +91,7 @@ const styles = {
     color: 'white',
     fontSize: '24px',
     marginBottom: '20px',
-    fontFamily: 'Roboto',
+    fontWeight: 'bold'
   },
   videoWrapper: {
     position: 'relative',
