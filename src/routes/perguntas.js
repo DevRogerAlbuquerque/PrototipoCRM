@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Button, Card, Container, Form } from 'react-bootstrap';
 import { useNavigate, useOutletContext } from 'react-router-dom';
 import { Toast } from 'primereact/toast';
@@ -26,41 +26,47 @@ const DynamicQuestions = () => {
     },
   ];
 
-  const [step, setStep] = useState(0); // Controle do passo atual
+  const [step, setStep] = useState(0);
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
   const [answers, setAnswers] = useState([]);
-  const [showMessage, setShowMessage] = useState(false); // Controle da mensagem
   const navigate = useNavigate();
+  const form = useRef(null);
+  const [validated, setValidated] = useState(false);
+  const toast = useRef(null);
 
   const handleNameSubmit = (e) => {
+    if(!form.current.checkValidity())
+      return setValidated(true);
+
+    setValidated(false);
+
     e.preventDefault();
-    if (name.trim() !== '') {
-      setStep(1); // Avança para as perguntas
-    } else {
-      alert('Por favor, digite seu nome.');
-    }
+
+    if (name.trim() !== '') 
+      setStep(1);
+   
   };
 
-  const handleAnswer = (answer) => {
-    // Atualiza as respostas
+  const handleAnswer = (answer) => 
+  {
     setAnswers((prevAnswers) => [...prevAnswers, answer]);
     
-    if (step < questionsTemplate.length) {
+    if (step < questionsTemplate.length) 
       setStep(step + 1);
-    } else {
-        setUser({...{
-            username: name,
-            password: password,
-            progresso: 1
-        }, ...{
-            preferencias: [...answers, answer]
-        }})
+    else {
+      const usuario = {...{
+          username: name,
+          password: password,
+          progresso: 1
+      }, ...{
+          preferencias: [...answers, answer]
+      }};
 
-        exibirToast(`Seu login foi criado, ${name}.`);
-      
-    
-    navigate('../main'); // Redireciona para a página principal após a mensagem
+      setUser(usuario);
+      localStorage.setItem('user', JSON.stringify(usuario));
+
+      navigate('../main');
     }
   };
 
@@ -70,11 +76,12 @@ const DynamicQuestions = () => {
       <Card className="p-4 shadow" style={{ maxWidth: "500px", width: "100%" }}>
         <Card.Body>
           {step === 0 ? (
-            <Form onSubmit={handleNameSubmit}>
+            <Form onSubmit={handleNameSubmit} ref={form} noValidate validated={validated}>
               <Form.Group controlId="formName" className="mb-3">
                 <Form.Label>Qual é o seu nome?</Form.Label>
                 <Form.Control
                   type="text"
+                  required={true}
                   placeholder="Digite seu nome"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -83,7 +90,8 @@ const DynamicQuestions = () => {
               <Form.Group controlId="formName" className="mb-3">
                 <Form.Label>Crie uma senha</Form.Label>
                 <Form.Control
-                  type="text"
+                  type="password"
+                  required={true}
                   placeholder="Crie uma senha"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}

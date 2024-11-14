@@ -83,9 +83,15 @@ nav {
 }
 
 #main .card:hover {
-  background-image: linear-gradient(to right bottom, #051937, #002265, #002894, #0027c1, #1214eb);
+  background-color: #155bb5;
   transform: scale(1.1);
+  border-style: hidden;
   color: white;
+}
+
+#main .card:hover button {
+  background-color: white;
+  color: #155bb5;
 }
 
 .hover:hover {
