@@ -5,7 +5,7 @@ import { useNavigate, useOutletContext } from 'react-router-dom';
 
 const MainPage = () => {
   const { user, setUser } = useOutletContext();
-  const { username, preferencias, progresso } = user; // Adicionando o progresso
+  const { username, preferencias, progresso, trilha } = user; // Adicionando o progresso
   
   // Função para criar módulos baseados nas preferências
   const generateModules = (preferencias, progresso) => {
@@ -80,6 +80,15 @@ const MainPage = () => {
 
       {/* Conteúdo principal com os módulos */}
       <Container id="main">
+        <Row>
+          <Col><h2 style={{
+              color: 'white',
+              fontSize: '24px',
+              textAlign: 'center',
+              marginBottom: '20px',
+              fontFamily: 'Roboto',
+            }}>Trilha de Aprendizado: {user.preferencias[2]}</h2></Col>
+        </Row>
         <Row className="g-4">
           {modules.map((module, index) => (
             <Col key={index} md={4}>

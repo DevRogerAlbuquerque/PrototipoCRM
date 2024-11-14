@@ -22,14 +22,14 @@ const VideoPlayer = () => {
       {progresso: 3, video: "https://www.youtube.com/watch?v=ZYOQwT5Srxk"}   // Como Lidar com Objeções de Clientes e Fechar Vendas
     ],
     "Gestão de Clientes": [
-      {progresso: 1, video: "https://www.youtube.com/watch?v=a3hd2jKrRKo"},  // Introdução ao CRM
-      {progresso: 2, video: "https://www.youtube.com/watch?v=nT2H5VhslE4"},  // Como reter clientes
-      {progresso: 3, video: "https://www.youtube.com/watch?v=F4PyCTQ-yPI"}   // Atendimento Personalizado ao Cliente
+      {progresso: 1, video: "https://www.youtube.com/watch?v=YbsTLkuM4tM"},  // Introdução ao CRM
+      {progresso: 2, video: "https://www.youtube.com/watch?v=cvAn9Q5rp-I"},  // Como reter clientes
+      {progresso: 3, video: "https://www.youtube.com/watch?v=fLdOGoCBgBk"}   // Atendimento Personalizado ao Cliente
     ],
     "Negociação": [
-      {progresso: 1, video: "https://www.youtube.com/watch?v=7UoQix4boFw"},  // Princípios de Negociação
-      {progresso: 2, video: "https://www.youtube.com/watch?v=mf0Vpg9jfG4"},  // Técnicas de Barganha
-      {progresso: 3, video: "https://www.youtube.com/watch?v=sb2VFdjoijA"}   // Negociação em Grupo
+      {progresso: 1, video: "https://www.youtube.com/watch?v=ezWR5TIXdaY"},  // Princípios de Negociação
+      {progresso: 2, video: "https://www.youtube.com/watch?v=_wY7dKVrTEM"},  // Técnicas de Barganha
+      {progresso: 3, video: "https://www.youtube.com/watch?v=JDaWSbD7TeU"}   // Negociação em Grupo
     ]
   };
 
@@ -85,6 +85,7 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     height: '100vh',
+    marginTop: '100px'
   },
   moduleTitle: {
     color: 'white',
@@ -97,6 +98,8 @@ const styles = {
     width: '80%',
     maxWidth: '800px',
     height: '450px',
+    border: '15px solid white',
+    borderRadius: '5%',
     marginBottom: '20px',
   },
   button: {
