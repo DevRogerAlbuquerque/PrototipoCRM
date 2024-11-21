@@ -123,7 +123,7 @@ const PerguntasQuiz = () => {
         ...user,
         progresso: user.progresso + 1
       });
-      navigate('../main');
+      navigate('../moduloDesbloqueado');
     } else {
       setFeedback('Resposta incorreta. Tente novamente!');
     }

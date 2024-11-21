@@ -8,6 +8,7 @@ import DynamicQuestions from './routes/perguntas';
 import MainPage from './routes/telaPrincipal';
 import VideoPlayer from './routes/ensinamento';
 import PerguntasQuiz from './routes/quiz';
+import ModuloDesbloqueado from './routes/moduloDesbloqueado';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,6 +21,7 @@ root.render(
           <Route path="ensino" element={<VideoPlayer />} />
           <Route path="quiz" element={<PerguntasQuiz />} />
           <Route path="main" element={<MainPage />} />
+          <Route path="moduloDesbloqueado" element={<ModuloDesbloqueado />} />
         </Route>
       </Routes>
     </BrowserRouter>
